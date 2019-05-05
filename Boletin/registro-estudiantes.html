@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Boletín</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="assets/css/-Login-form-Page-BS4-.css">
+    <link rel="stylesheet" href="assets/css/Contact-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/Navigation-with-Button.css">
+    <link rel="stylesheet" href="assets/css/Profile-Edit-Form-1.css">
+    <link rel="stylesheet" href="assets/css/Profile-Edit-Form.css">
+    <link rel="stylesheet" href="assets/css/Responsive-Form-1.css">
+    <link rel="stylesheet" href="assets/css/Responsive-Form.css">
+</head>
+
+<body style="color: rgb(75,147,220);background-color: rgb(64,220,230);filter: blur(0px) brightness(99%) grayscale(0%) hue-rotate(0deg) invert(0%) saturate(99%) sepia(0%);background-image: url(&quot;assets/img/a2df930a21710ae477e610ba4d9849d6.jpg&quot;);"><button class="btn btn-primary" type="button" style="background-color: rgb(52,81,234);">Volver a Inicio</button>
+    <div class="container">
+        <div>
+            <form action="php/registro-estudiantes.php" method="post">
+                <div class="text-center">
+                    <h1 style="color: rgb(0,0,0);">Formulario Para estudiantes</h1>
+                </div>
+                <div class="form-group">
+                    <div id="formdiv" style="color: rgb(75,89,220);">
+                        <div class="form-row" style="margin-right:0px;margin-left:0px;padding-top:24px;">
+                            <div class="col-md-8 offset-md-1">
+                                <p style="margin-left:2%;font-family:Roboto, sans-serif;font-size:24px;"><strong>Nombre</strong></p>
+                            </div>
+                            <div class="col-md-10 offset-md-1"><input class="form-control" type="text" name="nombre" placeholder="Nombre" style="margin-left:0px;font-family:Roboto, sans-serif;"></div>
+                        </div>
+                        <div class="form-row" style="margin-right:0px;margin-left:0px;padding-top:24px;">
+                            <div class="col-md-8 offset-md-1">
+                                <p style="margin-left:2%;font-family:Roboto, sans-serif;font-size:24px;"><strong>Apellido</strong></p>
+                            </div>
+                            <div class="col-md-10 offset-md-1"><input class="form-control" type="text" name="apellido" placeholder="Apellido" style="margin-left:0px;font-family:Roboto, sans-serif;"></div>
+                        </div>
+                        <div class="form-row" style="margin-right:0px;margin-left:0px;padding-top:24px;">
+                            <div class="col-md-8 offset-md-1">
+                                <p style="margin-left:2%;font-family:Roboto, sans-serif;font-size:24px;"><strong>Email</strong></p>
+                            </div>
+                            <div class="col-md-10 offset-md-1"><input class="form-control" type="email" name="email" placeholder="Email" style="margin-left:0px;font-family:Roboto, sans-serif;"></div>
+                        </div>
+                        <div class="form-row" style="margin-right:0px;margin-left:0px;padding-top:24px;margin-top:-16px;">
+                            <div class="col-md-8 offset-md-1">
+                                <p style="margin-left:2%;font-family:Roboto, sans-serif;font-size:24px;"><strong>Grado</strong></p>
+                            </div>
+                            <div class="col-md-10 offset-md-1"><select class="form-control" name="grado" style="font-family:Roboto, sans-serif;"><optgroup label="Grado"><option selected="">4to</option><option>5to</option><option>6to</option></optgroup></select></div>
+                        </div>
+                        <div class="form-row" style="margin-right:0px;margin-left:0px;padding-top:24px;margin-top:-16px;">
+                            <div class="col-md-8 offset-md-1">
+                                <p style="margin-left:2%;font-family:Roboto, sans-serif;font-size:24px;"><strong>Modalidad</strong></p>
+                            </div>
+                            <div class="col-md-10 offset-md-1"><select class="form-control" name="modalidad" style="font-family:Roboto, sans-serif;"><optgroup label="Modalidad"><option selected="">Enfermería</option><option>Administración</option><option>Contabilidad</option><option>Marketing</option><option>Informática</option></optgroup></select></div>
+                        </div>
+                        <div class="form-row" style="margin-right:0px;margin-left:0px;padding-top:24px;margin-top:-16px;">
+                            <div class="col-md-8 offset-md-1">
+                                <p style="margin-left:2%;font-family:Roboto, sans-serif;font-size:24px;"><strong>Sexo</strong></p>
+                            </div>
+                            <div class="col-md-10 offset-md-1"><select class="form-control" name="sexo" style="font-family:Roboto, sans-serif;"><optgroup label="Sexo"><option selected="">Femenino</option><option>Masculino</option></optgroup></select></div>
+                        </div>
+                        <div class="form-row" style="margin-right:0px;margin-left:0px;padding-top:24px;">
+                            <div class="col-md-8 offset-md-1">
+                                <p style="margin-left:2%;font-family:Roboto, sans-serif;font-size:24px;"><strong>Contraseña</strong></p>
+                            </div>
+                            <div class="col-md-10 offset-md-1"><input class="form-control" type="password" name="password" placeholder="Contraseña" style="margin-left:0px;font-family:Roboto, sans-serif;"></div>
+                        </div>
+                        <div class="form-row" style="margin-right:0px;margin-left:0px;padding-top:24px;">
+                            <div class="col-12 col-md-4 offset-md-4"><button class="btn btn-light btn-lg" type="reset" style="font-family:Roboto, sans-serif;">Clear </button><button class="btn btn-light btn-lg" type="submit" style="margin-left:16px;">Submit </button></div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/current-day.js"></script>
+    <script src="assets/js/Profile-Edit-Form.js"></script>
+</body>
+
+</html>
