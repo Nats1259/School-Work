@@ -11,13 +11,23 @@ $sexo = $_POST['sexo'];
 $pass = $_POST['password'];
 $username = ucwords($nombre . " " . $apellido);
 
-$insertar = "INSERT INTO estudiantes(Nombre, Apellido, CompleteName, Email, Grado, Modalidad, Sexo, Password, Avatar, Fecha_reg) Values('$nombre', '$apellido', '$username', '$email', '$grado', '$modal', '$sexo', '$pass', 'photo.jpg', now())";
+$insertar = "INSERT INTO usuarios(Nombre, Apellido, CompleteName, Email, Password, tipo_usuario, Sexo, Grado, Modalidad, Avatar, Fecha_reg) Values('$nombre', '$apellido', '$username', '$email', '$pass', 'Estudiante', '$sexo', '$grado', '$modal', 'photo.jpg', now())";
 
-$verificar_email = mysqli_query($conexion, "SELECT * FROM estudiantes WHERE Email = '$email'");
+$verificar_email = mysqli_query($conexion, "SELECT * FROM usuarios WHERE Email = '$email'");
 if(mysqli_num_rows($verificar_email) > 0)
 {
     echo '<script>
     alert("El email ya está registrado");
+    window.history.go(-1);
+    </script>';
+    exit;
+}
+
+$verificar_nombre = mysqli_query($conexion, "SELECT * FROM usuarios WHERE CompleteName = '$username'");
+if(mysqli_num_rows($verificar_nombre) > 0)
+{
+    echo '<script>
+    alert("Este nombre ya esta registrado");
     window.history.go(-1);
     </script>';
     exit;

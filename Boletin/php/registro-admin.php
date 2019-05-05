@@ -9,9 +9,9 @@ $cargo = $_POST['cargo'];
 $pass = $_POST['password'];
 $username = ucwords($nombre . " " . $apellido);
 
-$insertar = "INSERT INTO administradores(Nombre, Apellido, CompleteName, Email, Cargo, Password, Avatar, Fecha_reg) Values ('$nombre', '$apellido', '$username', '$email', '$cargo', '$pass', 'photo.jpg', now())";
+$insertar = "INSERT INTO usuarios(Nombre, Apellido, CompleteName, Email, Password, tipo_usuario, Cargo, Avatar, Fecha_reg) Values ('$nombre', '$apellido', '$username', '$email', '$pass', 'Administrador', '$cargo',  'photo.jpg', now())";
 
-$verificar_email = mysqli_query($conexion, "SELECT * FROM administradores WHERE Email = '$email'");
+$verificar_email = mysqli_query($conexion, "SELECT * FROM usuarios WHERE Email = '$email'");
 if(mysqli_num_rows($verificar_email) > 0) 
 {
 	echo '<script>
@@ -21,11 +21,21 @@ if(mysqli_num_rows($verificar_email) > 0)
 	exit;
 }
 
+$verificar_nombre = mysqli_query($conexion, "SELECT * FROM usuarios WHERE CompleteName = '$username'");
+if(mysqli_num_rows($verificar_nombre) > 0)
+{
+    echo '<script>
+    alert("Este nombre ya esta registrado");
+    window.history.go(-1);
+    </script>';
+    exit;
+}
+
 $resultado = mysqli_query($conexion, $insertar);
 if(!$resultado)
 {
 	echo '<script>
-	alert("El email ya esta registrado");
+	alert("Error al registrar");
 	window.history.go(-1);
 	</script>';
 	exit;
@@ -33,7 +43,7 @@ if(!$resultado)
 else
 {
 	echo '<script>
-	alert("El email ya esta registrado");
+	alert("Usuario registrado correctamente");
 	window.history.go(-1);
 	</script>';
 	exit;

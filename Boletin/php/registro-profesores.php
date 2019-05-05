@@ -8,9 +8,9 @@ $email = $_POST['email'];
 $pass = $_POST['password'];
 $username = ucwords($nombre . " " . $apellido);
 
-$insertar = "INSERT INTO maestros(Nombre, Apellido, CompleteName, Asignatura, Email, Password, Avatar, Fecha_reg) Values ('$nombre', '$apellido', '$username', '$asignatura', '$email', '$pass', 'photo.jpg', now())";
+$insertar = "INSERT INTO usuarios(Nombre, Apellido, CompleteName, Email, Password, tipo_usuario, Asignatura,  Avatar, Fecha_reg) Values ('$nombre', '$apellido', '$username', '$email', '$pass', 'Maestro/a', '$asignatura',  'photo.jpg', now())";
 
-$verificar_email = mysqli_query($conexion, "SELECT * FROM maestros WHERE Email = '$email'");
+$verificar_email = mysqli_query($conexion, "SELECT * FROM usuarios WHERE Email = '$email'");
 if(mysqli_num_rows($verificar_email) > 0)
 {
     echo '<script>
@@ -20,7 +20,7 @@ if(mysqli_num_rows($verificar_email) > 0)
     exit;
 }
 
-$verificar_nombre = mysqli_query($conexion, "SELECT * FROM maestros WHERE CompleteName = '$username'");
+$verificar_nombre = mysqli_query($conexion, "SELECT * FROM usuarios WHERE CompleteName = '$username'");
 if(mysqli_num_rows($verificar_nombre) > 0)
 {
     echo '<script>
